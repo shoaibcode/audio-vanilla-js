@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #wrapper {
+        width: 50%;
+        margin: 0 auto;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .play-wrapper {
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        padding: 10px;
+      }
+
+      .audio-detail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        width: 90%;
+      }
+
+      .audio-info {
+        display: flex;
+        margin-top: 10px;
+      }
+
+      .time {
+        width: 164px;
+        text-align: center;
+      }
+
+      .icon {
+        width: 90px;
+      }
+
+      .duration-wrapper {
+        width: 100%;
+        height: 5px;
+        background: #cdcdcd;
+      }
+
+      .duration-timeline {
+        height: 5px;
+        width: 0;
+        background: black;
+      }
+
+      .loop {
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        padding: 0 14px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="play-wrapper">
+        <svg
+          version="1.1"
+          id="play"
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 512 512"
+          style="enable-background: new 0 0 512 512;"
+          xml:space="preserve"
+        >
+          <g>
+            <g>
+              <g>
+                <path
+                  d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M256,490.667
+                  C126.604,490.667,21.333,385.396,21.333,256S126.604,21.333,256,21.333S490.667,126.604,490.667,256S385.396,490.667,256,490.667
+                  z"
+                />
+                <path
+                  d="M357.771,247.031l-149.333-96c-3.271-2.135-7.5-2.25-10.875-0.396C194.125,152.51,192,156.094,192,160v192
+                  c0,3.906,2.125,7.49,5.563,9.365c1.583,0.865,3.354,1.302,5.104,1.302c2,0,4.021-0.563,5.771-1.698l149.333-96
+                  c3.042-1.958,4.896-5.344,4.896-8.969S360.813,248.99,357.771,247.031z M213.333,332.458V179.542L332.271,256L213.333,332.458z"
+                />
+              </g>
+            </g>
+          </g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+        </svg>
+
+        <svg
+          viewBox="0 0 480 480"
+          id="pause"
+          class="icon"
+          style="display: none;"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m240 0c-132.546875 0-240 107.453125-240 240s107.453125 240 240 240 240-107.453125 240-240c-.148438-132.484375-107.515625-239.851562-240-240zm0 464c-123.710938 0-224-100.289062-224-224s100.289062-224 224-224 224 100.289062 224 224c-.140625 123.652344-100.347656 223.859375-224 224zm0 0"
+          />
+          <path
+            d="m200 128c-4.417969 0-8 3.582031-8 8v208c0 4.417969 3.582031 8 8 8s8-3.582031 8-8v-208c0-4.417969-3.582031-8-8-8zm0 0"
+          />
+          <path
+            d="m280 128c-4.417969 0-8 3.582031-8 8v208c0 4.417969 3.582031 8 8 8s8-3.582031 8-8v-208c0-4.417969-3.582031-8-8-8zm0 0"
+          />
+        </svg>
+
+        <div class="audio-detail">
+          <div class="duration-wrapper">
+            <div class="duration-timeline"></div>
+          </div>
+          <div class="audio-info">
+            <div class="time"></div>
+            <input type="range" class="range" min="0" max="1" step="0.1" />
+            <div class="loop">ON</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./custom.js"></script>
+  </body>
+</html>
